@@ -1,0 +1,215 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply overflow-x-hidden;
+  }
+
+  .container {
+    @apply max-w-[1600px] w-full px-4 mx-auto;
+  }
+}
+
+@layer components {
+  .header__nav--top li {
+    @apply text-xl font-normal py-5;
+  }
+
+  .header__nav--top {
+    @apply border-b-2 border-b-[#E5E5E5] lg:border-b-0;
+  }
+
+  .header__nav--bottom a {
+    @apply text-base font-normal justify-center;
+  }
+
+  .header__nav--bottom--loc i,
+  .header__nav--bottom--loc a {
+    @apply text-xl justify-center pt-5 lg:pt-0 ;
+  }
+
+  .header__nav.open {
+    @apply left-[8rem];
+  }
+
+  /* JOIN BANNER */
+  .joinBanner.active {
+    @apply top-0 duration-150;
+  }
+
+  .joinBanner{
+        @apply  duration-150;
+      }
+
+  /* FAVS */
+  .favorites__card--text img{
+    @apply lg:w-[19rem]
+  }
+
+  /* TOGGLE MENU */
+  .toggle__menu span {
+    @apply bg-black h-1 m-0.5 block w-10 transition-all duration-700;
+  }
+
+  .toggle__menu.open span:first-child{
+    @apply rotate-[225deg] translate-y-3 rounded-md transition-all duration-700;
+  }
+
+  .toggle__menu.open span:nth-child(2){
+    @apply opacity-0 transition-all duration-700;
+  }
+
+  .toggle__menu.open span:last-child{
+    @apply -rotate-[225deg] rounded-md transition-all duration-700;
+  }
+
+  /* GETTING STARTED */
+  .gettingStarted--steps--text a {
+    @apply text-links_dark underline;
+  }
+
+  .favorites__card--text{
+    @apply opacity-0 transition-all duration-700;
+  }
+
+  .favorites__card--text.active{
+    @apply opacity-100 ease-in-out transition-all duration-700;
+    
+  }
+
+  .favorites__card--nav i{
+    @apply text-star text-[11px];
+  }
+  .favorites__card--nav {
+    @apply flex flex-row justify-between;
+  }
+  .favorites__card--nav h3{
+    @apply text-2xl p-5 cursor-pointer font-semibold;
+  }
+
+  .favorites__card--nav h3.active{
+    @apply  border-b-4 border-nav_gren;
+  }
+
+  /* extras */
+  .extras__card a {
+    @apply text-links_dark underline;
+  }
+
+  .extras__card--text{
+    @apply lg:text-center;
+  }
+
+.extras__card--text p{
+  @apply lg:max-w-[25rem]
+}
+
+  .extras__card{
+    @apply lg:items-center gap-5;
+  }
+
+  /*  */
+  .questions__title a{
+    @apply text-links_dark underline hover:no-underline;
+  }
+
+  .paragraph1 p, .paragraph2 p{
+    @apply px-3;
+  }
+
+  .paragraph2 h2{
+    @apply px-2
+  }
+  /*  */
+  .partners__links i, .partners__links a {
+    @apply text-links_dark;
+  }
+
+  .information__links{
+    @apply w-[13rem];
+  }
+
+    .information__links a{
+    @apply hover:text-black;
+  }
+
+  .information__links--title h2{
+    @apply font-semibold
+  }
+
+  /*  */
+  .paragraph2-text h2{
+    @apply text-[#686868] font-bold;
+  }
+
+  .paragraph2-text i, .paragraph2-text a{
+    @apply text-links_dark
+  }
+  .paragraph2 a{
+    @apply underline hover:no-underline;
+  }
+  .paragraph2 i{
+    @apply px-[5px];
+  }
+  .paragraph1 i, .paragraph1 a{
+    @apply text-links_dark
+  }
+
+  .paragraph1 i{
+    @apply px-[5px];
+  }
+
+  .paragraph1 a{
+    @apply underline hover:no-underline;
+  }
+
+  .paragraph1 p{
+    @apply pb-10;
+  }
+  /* INFORMATION */
+  .dropdown__links {
+    @apply h-auto max-h-0 overflow-hidden transition-all duration-700;
+  }
+
+  .dropdown__links li{
+    @apply hover:text-black;
+  }
+  .dropdown__links.open{
+    @apply h-auto max-h-[20rem] transition-all duration-700;
+  }
+  .dropdowns__title i{
+    @apply -rotate-180 transition-all duration-700;
+  }
+  .dropdowns__title.open i{
+    @apply rotate-0 transition-all duration-700;
+  }
+
+
+  /* FOOTER */
+  .footer__links a{
+    @apply hover:underline
+  }
+  
+  /* BUTTONS */
+  .btn {
+    @apply py-2 px-4 bg-transparent border-transparent rounded-xl shadow-[0_8px_24px_-15px_rgba(149,157,165,0.2)];
+  }
+
+  .btn.bg--black {
+    @apply py-1 bg-black text-white border border-black hover:bg-gray-300 hover:text-black rounded-full;
+  }
+
+  .btn.bg--black2 {
+    @apply py-1 bg-transparent text-black border border-black hover:bg-gray-300 rounded-full;
+  }
+
+  .btn.bg--white {
+    @apply text-wrap border border-white rounded-full;
+  }
+
+  .btn.bg--greenn {
+    @apply bg-btn_green text-white rounded-full;
+  }
+}
